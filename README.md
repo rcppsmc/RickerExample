@@ -19,7 +19,7 @@ devtools::load_all('RickerExample')
 devtools::build('RickerExample')
 ```
 
-and look at the documentation with `?RickerExample`. There is some example code in the documentation, but you may wish to reduce \code{N1} and \code{N2} to 100 for a quick run.
+and look at the documentation with `?RickerExample`. There is some example code in the documentation, but you may wish to reduce `N1` and `N2` to 100 for a quick run.
 
 ### Using RcppSMC without creating your own package
 
