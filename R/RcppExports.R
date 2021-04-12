@@ -7,9 +7,7 @@
 #' @param temperatures The likelihood annealing temperature schedule
 #' 
 #' @examples
-#' \dontrun{
-#' library(RickerExample)
-#' 
+#' \dontrun{ 
 #' # some data
 #' y <- c(93,1,34,100,0,8,264,0,0,0,
 #'      0,2,44,15,164,0,0,1,60,1,
@@ -34,9 +32,12 @@
 #' true_logged <- c(3.8,2.3026,-1.204)
 #' res <- as.data.frame(results)
 #' require(ggplot2)
-#' ggplot(res, aes(samples.1)) + geom_density(aes(weight=weights)) + geom_vline(aes(xintercept = true_logged[1])) + xlab("log r")
-#' ggplot(res, aes(samples.2)) + geom_density(aes(weight=weights)) + geom_vline(aes(xintercept = true_logged[2])) + xlab("log phi")
-#' ggplot(res, aes(samples.3)) + geom_density(aes(weight=weights)) + geom_vline(aes(xintercept = true_logged[3])) + xlab("log sigma")
+#' ggplot(res, aes(samples.1)) + geom_density(aes(weight=weights)) +
+#' 	geom_vline(aes(xintercept = true_logged[1])) + xlab("log r")
+#' ggplot(res, aes(samples.2)) + geom_density(aes(weight=weights)) +
+#' 	geom_vline(aes(xintercept = true_logged[2])) + xlab("log phi")
+#' ggplot(res, aes(samples.3)) + geom_density(aes(weight=weights)) +
+#' 	geom_vline(aes(xintercept = true_logged[3])) + xlab("log sigma")
 #'}
 #' @name RickerExample-package
 SMC_Ricker <- function(data, outN, inN, temperatures) {

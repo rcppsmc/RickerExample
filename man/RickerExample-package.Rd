@@ -5,7 +5,6 @@
 \alias{RickerExample-package}
 \alias{SMC_Ricker}
 \alias{RickerExample}
-\alias{RickerExample-package}
 \title{Ricker example}
 \usage{
 SMC_Ricker(data, outN, inN, temperatures)
@@ -53,9 +52,7 @@ and \eqn{0=\gamma_0 \le \ldots \le \gamma_T = 1}. This is a sequential
 Monte Carlo (SMC) method, so we are performing two levels of SMC.
 }
 \examples{
-\dontrun{
-library(RickerExample)
-
+\dontrun{ 
 # some data
 y <- c(93,1,34,100,0,8,264,0,0,0,
      0,2,44,15,164,0,0,1,60,1,
@@ -80,9 +77,12 @@ results$logZ
 true_logged <- c(3.8,2.3026,-1.204)
 res <- as.data.frame(results)
 require(ggplot2)
-ggplot(res, aes(samples.1)) + geom_density(aes(weight=weights)) + geom_vline(aes(xintercept = true_logged[1])) + xlab("log r")
-ggplot(res, aes(samples.2)) + geom_density(aes(weight=weights)) + geom_vline(aes(xintercept = true_logged[2])) + xlab("log phi")
-ggplot(res, aes(samples.3)) + geom_density(aes(weight=weights)) + geom_vline(aes(xintercept = true_logged[3])) + xlab("log sigma")
+ggplot(res, aes(samples.1)) + geom_density(aes(weight=weights)) +
+	geom_vline(aes(xintercept = true_logged[1])) + xlab("log r")
+ggplot(res, aes(samples.2)) + geom_density(aes(weight=weights)) +
+	geom_vline(aes(xintercept = true_logged[2])) + xlab("log phi")
+ggplot(res, aes(samples.3)) + geom_density(aes(weight=weights)) +
+	geom_vline(aes(xintercept = true_logged[3])) + xlab("log sigma")
 }
 }
 \references{

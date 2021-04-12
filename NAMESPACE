@@ -1,6 +1,5 @@
 useDynLib("RickerExample", .registration=TRUE)
 
 importFrom("Rcpp", "evalCpp")
-import("RcppSMC")
 
 export("SMC_Ricker")
